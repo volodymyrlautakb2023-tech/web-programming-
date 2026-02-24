@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer>
-      <p>© 2026 Володимир Лаута</p>
+    <footer className="mt-12 py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+      © 2026 Володимир Лаута
     </footer>
   );
 }
