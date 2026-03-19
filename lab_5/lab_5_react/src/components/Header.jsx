@@ -9,7 +9,7 @@ function Header({ theme }) {
   return (
     <header className={headerClass}>
       <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-        Володимир Лаута
+        Лабораторна робота 5 react
       </h1>
 
       <p className={pClass}>
