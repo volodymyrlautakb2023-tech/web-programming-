@@ -1,0 +1,375 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+/* ===== MAIN LAYOUT ===== */
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
+}
+
+.card h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-top: 20px;
+  color: #f1f5f9; /* dark theme OK */
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  border-top: 1px solid #1f2937;
+  color: #64748b;
+}
+
+.sysinfo{
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 950px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================================== */
+/* ========================= LAB 4 EXTRAS =============================== */
+/* ===================================================================== */
+
+/* Theme button */
+.theme-btn{
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.theme-btn:hover{
+  transform: translateY(-2px);
+  border-color:#38bdf8;
+}
+
+/* Reviews */
+.reviews{
+  display: grid;
+  gap: 12px;
+}
+
+.review-item{
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: rgba(15,23,42,.6);
+}
+
+.review-item h4{
+  color:#e2e8f0;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.review-email{
+  color:#94a3b8;
+  font-weight: 400;
+}
+
+.review-item p{
+  color:#cbd5e1;
+  font-size: 13px;
+}
+
+/* Modal */
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.modal-overlay.show{
+  display:flex;
+}
+
+.modal{
+  width: min(520px, 100%);
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 0 35px rgba(56,189,248,.15);
+  position: relative;
+}
+
+.modal-title{
+  color:#38bdf8;
+  margin-bottom: 14px;
+}
+
+.modal-close{
+  position:absolute;
+  right: 14px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: transparent;
+  color:#e5e7eb;
+  cursor:pointer;
+}
+.modal-close:hover{
+  border-color:#38bdf8;
+}
+
+.modal-form{
+  display:grid;
+  gap:12px;
+}
+
+.modal-form label{
+  font-size:13px;
+  color:#cbd5e1;
+  display:grid;
+  gap:6px;
+}
+
+.modal-form input,
+.modal-form textarea{
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: rgba(15,23,42,.7);
+  color:#e5e7eb;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus{
+  border-color:#38bdf8;
+}
+
+.btn-primary{
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  color:#0b1220;
+  font-weight: 700;
+  cursor:pointer;
+}
+
+/* ===================================================================== */
+/* =========================== LIGHT THEME ============================== */
+/* ===================================================================== */
+
+body.light{
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color:#111827;
+}
+
+body.light header{
+  background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+body.light header p{
+  color:#334155;
+}
+
+body.light .sidebar,
+body.light .card{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+}
+
+body.light .sidebar h2,
+body.light .card h2{
+  color:#2563eb;
+}
+
+body.light .sidebar li,
+body.light .card li,
+body.light .card p{
+  color:#334155;
+}
+
+body.light footer{
+  border-top: 1px solid #cbd5e1;
+  color:#475569;
+}
+
+body.light .sysinfo{
+  color:#475569;
+}
+
+body.light .theme-btn{
+  background: #ffffff;
+  color:#0f172a;
+  border-color:#cbd5e1;
+}
+
+body.light .review-item{
+  background: #ffffff;
+  border-color:#e2e8f0;
+}
+
+body.light .review-item h4{
+  color:#0f172a;
+}
+
+body.light .review-item p{
+  color:#334155;
+}
+
+body.light .review-email{
+  color:#475569;
+}
+
+body.light .modal{
+  background: #ffffff;
+  border-color:#e2e8f0;
+}
+
+body.light .modal-form label{
+  color:#334155;
+}
+
+body.light .modal-form input,
+body.light .modal-form textarea{
+  background: #ffffff;
+  color:#0f172a;
+  border-color:#cbd5e1;
+}
+
+body.light .modal-close{
+  color:#0f172a;
+  border-color:#cbd5e1;
+}
+
+/* ===================================================================== */
+/* ====================== FIXES (ДОДАНО) ================================ */
+/* ===================================================================== */
+
+/* ✅ Фікс: у світлій темі h3 були майже білі, тому "зникали" */
+body.light .card h3{
+  color:#111827;
+}
+
+/* ✅ (опційно) якщо раптом колись з'являться h3 у sidebar */
+body.light .sidebar h3{
+  color:#111827;
+}
