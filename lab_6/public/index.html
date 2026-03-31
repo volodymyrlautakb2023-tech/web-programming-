@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Резюме Володимира Лаути">
+  <meta name="author" content="Володимир Лаута">
+  <title>ЛР6 - Резюме</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header>
+  <h1>Володимир Лаута</h1>
+  <p>Телефон: 380657625455 | Email: v.laauta.student@gmail.com | Місто: Львів</p>
+  <button id="themeBtn" class="theme-btn" type="button">Змінити тему</button>
+</header>
+
+<main>
+  <div class="content">
+
+    <aside class="sidebar">
+      <section>
+        <h2>Освіта</h2>
+        <p><strong>Львівська Політехніка</strong></p>
+        <p>Спеціальність: Кібербезпека</p>
+        <p>2023 – теперішній час</p>
+      </section>
+
+      <section>
+        <h2>Досягнення</h2>
+        <ul>
+          <li>Участь у CTF-змаганнях з кібербезпеки</li>
+          <li>Проходження курсу з мережевої безпеки</li>
+          <li>Сертифікат з основ Linux</li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="main-content">
+
+      <section class="card">
+        <h2>Мета</h2>
+        <p>
+          Отримати позицію студента-практиканта у сфері кібербезпеки,
+          де зможу застосувати знання з інформаційної безпеки,
+          мережевих технологій та аналізу загроз.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Досвід</h2>
+
+        <h3>IT Support Intern</h3>
+        <p>CyberTech Solutions, Львів</p>
+        <p>Червень 2024 – Серпень 2024</p>
+
+        <h3>Junior Security Analyst (Практика)</h3>
+        <p>SecureNet Lab, Львів</p>
+        <p>Січень 2025 – Березень 2025</p>
+      </section>
+
+      <section class="card">
+        <h2>Відгуки</h2>
+        <div id="reviews" class="reviews">
+          <div class="review-item">
+            <h4>Завантаження...</h4>
+            <p>Чекаю відповідь сервера</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer id="footer">
+  <p>© 2026 Володимир Лаута</p>
+</footer>
+
+<!-- МОДАЛЬНЕ ВІКНО -->
+<div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+  <div class="modal">
+    <button id="closeModal" class="modal-close" type="button">×</button>
+    <h2 class="modal-title">Зворотній зв'язок</h2>
+
+    <!-- Забрали тільки action і method -->
+    <form id="contactForm" class="modal-form">
+
+      <input type="hidden" name="_subject" value="Нове повідомлення з ЛР6">
+
+      <label>
+        Ім'я
+        <input name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input name="email" type="email" required>
+      </label>
+
+      <label>
+        Телефон
+        <input name="phone">
+      </label>
+
+      <label>
+        Тема
+        <input name="subject" required>
+      </label>
+
+      <label>
+        Повідомлення
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+
+      <button type="submit" class="btn-primary">Відправити</button>
+    </form>
+
+    <p id="successMessage" style="display:none; margin-top:15px; color:#22c55e;">
+      ✅ Дякую! Повідомлення успішно надіслано.
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

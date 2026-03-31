@@ -1,0 +1,14 @@
+# Ігноруємо файл із паролями
+.env
+
+# Ігноруємо папку з бібліотеками (вона заважка для GitHub)
+node_modules/
+
+# Ігноруємо логи помилок
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ігноруємо системні файли Windows
+Thumbs.db
+desktop.ini
